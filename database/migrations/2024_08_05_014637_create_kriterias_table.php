@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('kriteria', function (Blueprint $table) {
             $table->id();
-            $table->json('data_kriteria');
+            // $table->json('data_kriteria');
+            $table->string('name');
+            $table->string('keterangan');
+            $table->string('group');
             $table->timestamps();
         });
     }

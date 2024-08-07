@@ -13,14 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('bobot_kriteria', function (Blueprint $table) {
+        Schema::create('barang', function (Blueprint $table) {
             $table->id();
-            // $table->json('data_bobot');
-            $table->string('jenis_kriteria');
-            $table->string('kategori');
-            $table->integer('nilai');
-            $table->unsignedBigInteger('kriteria_id');
-            $table->foreign('kriteria_id')->references('id')->on('kriteria');
+            $table->string("name");
+            $table->string("group");
             $table->timestamps();
         });
     }
@@ -32,6 +28,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bobot_kriteria');
+        Schema::table('barang', function (Blueprint $table) {
+            //
+        });
     }
 };
