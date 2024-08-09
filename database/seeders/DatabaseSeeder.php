@@ -29,7 +29,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             KriteriaSeeder::class,
             BobotKriteriaSeeder::class,
-            DataPenelitianSeeder::class,
+            BarangSeeder::class
+            // DataPenelitianSeeder::class,
         ]);
     }
 }

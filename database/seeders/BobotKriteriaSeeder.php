@@ -14,134 +14,183 @@ class BobotKriteriaSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\BobotKriteria::create([
-            'data_bobot' => json_encode(
+        $data = [
+            [
                 [
-                    [
-                        'kriteria' => 'c1',
-                        [
-                            'spesifikasi_produk' => 'Tidak Sesuai',
-                            'nilai' => 1
-                        ],
-                        [
-                            'spesifikasi_produk' => 'Sesuai',
-                            'nilai' => 3
-                        ],
-                        [
-                            'spesifikasi_produk' => 'Sangat Sesuai',
-                            'nilai' => 5
-                        ],
-                    ],
-                    [
-                        'kriteria' => 'c2',
-                        [
-                            'harga_produk' => 'Sangat Murah',
-                            'kategori' => 'Sangat Memenuhi',
-                            'nilai' => 5
-                        ],
-                        [
-                            'harga_produk' => 'Murah',
-                            'kategori' => 'Memenuhi',
-                            'nilai' => 4
-                        ],
-                        [
-                            'harga_produk' => 'Terjangkau',
-                            'kategori' => 'Cukup Memenuhi',
-                            'nilai' => 3
-                        ],
-                        [
-                            'harga_produk' => 'Mahal',
-                            'kategori' => 'Tidak Memenuhi',
-                            'nilai' => 2
-                        ],
-                        [
-                            'harga_produk' => 'Sangat Mahal',
-                            'kategori' => 'Sangat Tidak Memenuhi',
-                            'nilai' => 1
-                        ],
-                    ],
-                    [
-                        'kriteria' => 'c3',
-                        [
-                            'kualitas_produk' => 'Sangat Berkualitas',
-                            'kategori' => 'Sangat Memenuhi',
-                            'nilai' => 5
-                        ],
-                        [
-                            'kualitas_produk' => 'Berkualitas',
-                            'kategori' => 'Memenuhi',
-                            'nilai' => 4
-                        ],
-                        [
-                            'kualitas_produk' => 'Cukup Berkualitas',
-                            'kategori' => 'Cukup',
-                            'nilai' => 3
-                        ],
-                        [
-                            'kualitas_produk' => 'Tidak Berkualitas',
-                            'kategori' => 'Tidak Memenuhi',
-                            'nilai' => 2
-                        ],
-                        [
-                            'kualitas_produk' => 'Sangat Tidak Berkualitas',
-                            'kategori' => 'Sangat Tidak Memenuhi',
-                            'nilai' => 1
-                        ],
-                    ],
-                    [
-                        'kriteria' => 'c4',
-                        [
-                            'masa_garansi_produk' => 'Tidak ada garansi',
-                            'kategori' => 'Sangat Tidak Memenuhi',
-                            'nilai' => 1
-                        ],
-                        [
-                            'masa_garansi_produk' => 'Jangka Waktu Sebentar',
-                            'kategori' => 'Tidak Memenuhi',
-                            'nilai' => 2
-                        ],
-                        [
-                            'masa_garansi_produk' => 'Jangka Waktu Cukup Lama',
-                            'kategori' => 'Cukup Memenuhi',
-                            'nilai' => 3
-                        ],
-                        [
-                            'masa_garansi_produk' => 'Jangka Waktu Lama',
-                            'kategori' => 'Memenuhi',
-                            'nilai' => 4
-                        ],
-                        [
-                            'masa_garansi_produk' => 'Jangka Waktu Sangat Lama',
-                            'kategori' => 'Sangat Memenuhi',
-                            'nilai' => 5
-                        ],
-                    ],
-                    [
-                        'kriteria' => 'c5',
-                        [
-                            'populasi_produk' => 'Sangat Banyak',
-                            'kategori' => 'Sangat Memenuhi',
-                            'nilai' => 5
-                        ],
-                        [
-                            'populasi_produk' => 'Banyak',
-                            'kategori' => 'Memenuhi',
-                            'nilai' => 4
-                        ],
-                        [
-                            'populasi_produk' => 'Cukup Banyak',
-                            'kategori' => 'Cukup Memenuhi',
-                            'nilai' => 3
-                        ],
-                        [
-                            'populasi_produk' => 'Tidak ada',
-                            'kategori' => 'Sangat Tidak Memenuhi',
-                            'nilai' => 1
-                        ],
-                    ],
+                    'jenis_kriteria' => 'Spesifikasi Produk',
+                    'spesifikasi_produk' => 'Tidak Sesuai',
+                    'kategori' => 'Tidak Memenuhi',
+                    'nilai' => 1,
+                    'kriteria_id' => 1
                 ],
-            ),
-            'kriteria_id' => 1
-        ]);
+                [
+                    'jenis_kriteria' => 'Spesifikasi Produk',
+                    'spesifikasi_produk' => 'Sesuai',
+                    'kategori' => 'Cukup Memenuhi',
+                    'nilai' => 3,
+                    'kriteria_id' => 1
+                ],
+                [
+                    'jenis_kriteria' => 'Spesifikasi Produk',
+                    'spesifikasi_produk' => 'Sangat Sesuai',
+                    'kategori' => 'Sangat Memenuhi',
+                    'nilai' => 5,
+                    'kriteria_id' => 1
+                ],
+            ],
+            [
+                [
+                    'jenis_kriteria' => 'Harga Produk',
+                    'harga_produk' => 'Sangat Murah',
+                    'kategori' => 'Sangat Memenuhi',
+                    'nilai' => 5,
+                    'kriteria_id' => 2
+                ],
+                [
+                    'jenis_kriteria' => 'Harga Produk',
+                    'harga_produk' => 'Murah',
+                    'kategori' => 'Memenuhi',
+                    'nilai' => 4,
+                    'kriteria_id' => 2
+                ],
+                [
+                    'jenis_kriteria' => 'Harga Produk',
+                    'harga_produk' => 'Terjangkau',
+                    'kategori' => 'Cukup Memenuhi',
+                    'nilai' => 3,
+                    'kriteria_id' => 2
+                ],
+                [
+                    'jenis_kriteria' => 'Harga Produk',
+                    'harga_produk' => 'Mahal',
+                    'kategori' => 'Tidak Memenuhi',
+                    'nilai' => 2,
+                    'kriteria_id' => 2
+                ],
+                [
+                    'jenis_kriteria' => 'Harga Produk',
+                    'harga_produk' => 'Sangat Mahal',
+                    'kategori' => 'Sangat Tidak Memenuhi',
+                    'nilai' => 1,
+                    'kriteria_id' => 2
+                ],
+            ],
+            [
+                [
+                    'jenis_kriteria' => 'Kualitas Produk',
+                    'kualitas_produk' => 'Sangat Berkualitas',
+                    'kategori' => 'Sangat Memenuhi',
+                    'nilai' => 5,
+                    'kriteria_id' => 3
+                ],
+                [
+                    'jenis_kriteria' => 'Kualitas Produk',
+                    'kualitas_produk' => 'Berkualitas',
+                    'kategori' => 'Memenuhi',
+                    'nilai' => 4,
+                    'kriteria_id' => 3
+                ],
+                [
+                    'jenis_kriteria' => 'Kualitas Produk',
+                    'kualitas_produk' => 'Cukup Berkualitas',
+                    'kategori' => 'Cukup',
+                    'nilai' => 3,
+                    'kriteria_id' => 3
+                ],
+                [
+                    'jenis_kriteria' => 'Kualitas Produk',
+                    'kualitas_produk' => 'Tidak Berkualitas',
+                    'kategori' => 'Tidak Memenuhi',
+                    'nilai' => 2,
+                    'kriteria_id' => 3
+                ],
+                [
+                    'jenis_kriteria' => 'Kualitas Produk',
+                    'kualitas_produk' => 'Sangat Tidak Berkualitas',
+                    'kategori' => 'Sangat Tidak Memenuhi',
+                    'nilai' => 1,
+                    'kriteria_id' => 3
+                ],
+            ],
+            [
+                [
+                    'jenis_kriteria' => 'Masa Garansi Produk',
+                    'masa_garansi_produk' => 'Tidak ada garansi',
+                    'kategori' => 'Sangat Tidak Memenuhi',
+                    'nilai' => 1,
+                    'kriteria_id' => 4
+                ],
+                [
+                    'jenis_kriteria' => 'Masa Garansi Produk',
+                    'masa_garansi_produk' => 'Jangka Waktu Sebentar',
+                    'kategori' => 'Tidak Memenuhi',
+                    'nilai' => 2,
+                    'kriteria_id' => 4
+                ],
+                [
+                    'jenis_kriteria' => 'Masa Garansi Produk',
+                    'masa_garansi_produk' => 'Jangka Waktu Cukup Lama',
+                    'kategori' => 'Cukup Memenuhi',
+                    'nilai' => 3,
+                    'kriteria_id' => 4
+                ],
+                [
+                    'jenis_kriteria' => 'Masa Garansi Produk',
+                    'masa_garansi_produk' => 'Jangka Waktu Lama',
+                    'kategori' => 'Memenuhi',
+                    'nilai' => 4,
+                    'kriteria_id' => 4
+                ],
+                [
+                    'jenis_kriteria' => 'Masa Garansi Produk',
+                    'masa_garansi_produk' => 'Jangka Waktu Sangat Lama',
+                    'kategori' => 'Sangat Memenuhi',
+                    'nilai' => 5,
+                    'kriteria_id' => 4
+                ],
+            ],
+            [
+                [
+                    'jenis_kriteria' => 'Populasi Produk',
+                    'populasi_produk' => 'Sangat Banyak',
+                    'kategori' => 'Sangat Memenuhi',
+                    'nilai' => 5,
+                    'kriteria_id' => 5
+                ],
+                [
+                    'jenis_kriteria' => 'Populasi Produk',
+                    'populasi_produk' => 'Banyak',
+                    'kategori' => 'Memenuhi',
+                    'nilai' => 4,
+                    'kriteria_id' => 5
+                ],
+                [
+                    'jenis_kriteria' => 'Populasi Produk',
+                    'populasi_produk' => 'Cukup Banyak',
+                    'kategori' => 'Cukup Memenuhi',
+                    'nilai' => 3,
+                    'kriteria_id' => 5
+                ],
+                [
+                    'jenis_kriteria' => 'Populasi Produk',
+                    'populasi_produk' => 'Tidak ada',
+                    'kategori' => 'Sangat Tidak Memenuhi',
+                    'nilai' => 1,
+                    'kriteria_id' => 5
+                ],
+            ],
+        ];
+        for ($i = 0; $i < count($data); $i++) {
+            // print_r($data[$i]);
+            for ($j = 0; $j < count($data[$i]); $j++) {
+                // print_r($data[$i][0]['jenis_kriteria']);
+                \App\Models\BobotKriteria::create([
+                    'jenis_kriteria' => $data[$i][$j]['jenis_kriteria'],
+                    'kategori' => $data[$i][$j]['kategori'],
+                    'nilai' => $data[$i][$j]['nilai'],
+                    'kriteria_id' => $data[$i][$j]['kriteria_id']
+                ]);
+            }
+        }
     }
 }
