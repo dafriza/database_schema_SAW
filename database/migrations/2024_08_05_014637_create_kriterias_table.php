@@ -18,6 +18,8 @@ return new class extends Migration
             // $table->json('data_kriteria');
             $table->string('name');
             $table->string('keterangan');
+            $table->string('type');
+            $table->string('bobot');
             $table->string('group');
             $table->timestamps();
         });

@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('data_penelitian', function (Blueprint $table) {
-            $table->id();
-            $table->string('barang');
-            $table->json('data_barang');
-            $table->timestamps();
+        Schema::table('saw_bobot_kriteria', function ($table) {
+            $table->dropForeign('saw_bobot_kriteria_kriteria_id_foreign');
+            $table->dropForeign('saw_bobot_kriteria_bobot_kriteria_id_foreign');
+            $table->dropColumn('kriteria_id');
+            $table->dropColumn('bobot_kriteria_id');
         });
+        Schema::drop("saw_bobot_kriteria");
     }
 
     /**
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('data_penelitian');
+        //
     }
 };
